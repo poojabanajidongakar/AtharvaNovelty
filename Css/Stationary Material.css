@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Rajdhani&display=swap");
+
+:root {
+  --red: #b71c1c;
+  --white: white;
+  --black: #000; /* Added black variable */
+  --select: #c62828;
+}
+
+* {
+  padding: 5px;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background-image: url("https://scontent-den4-1.xx.fbcdn.net/v/t1.6435-9/58382230_1804073263072067_6175177899423825920_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=YsINUsI5cQ8AX-k-CUU&_nc_ht=scontent-den4-1.xx&oh=00_AT_yKR3PIpZ9XC5jkShoLmyD3TMxh1GhjB7pt7nzsR0GOA&oe=630DD6B1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  position: relative;
+}
+
+.navbarTitle {
+  color: var(--white);
+  font-size: 2.6em;
+  background-color: var(--red);
+  padding: 9px 20px;
+  border-radius: 0.5em;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 60px 0 60px;
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 20px;
+}
+li a {
+  color: black;
+  padding: 6px;
+  background-color: var(--white);
+  text-decoration: none;
+  border-radius: 0.5em;
+}
+li a:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transition: 0.3s ease-in-out;
+}
+
+/* Cart button in navbar, icon */
+.cart i {
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-right: 5px;
+}
+.cart a {
+  background-color: var(--red);
+  color: var(--white);
+  cursor: pointer; /* Fixed typo from "cusor" */
+  text-decoration: none;
+}
+
+/* CSS Style for Shop Index Page */
+.image img {
+  width: 170px;
+  height: 170px;
+  border-radius: 0.5em;
+  object-fit: cover;
+}
+
+.container {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(4, 1fr); /* More concise way to define columns */
+  justify-content: center;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.image {
+  margin: 0 20px; /* Simplified margin */
+  position: relative;
+  overflow: hidden;
+}
+
+.add-cart {
+  position: absolute;
+  width: 100%;
+  background-color: var(--select);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  text-align: center;
+  color: var(--white);
+}
+
+.image:hover .add-cart { /* Simplified hover effect */
+  bottom: 50px;
+  opacity: 1;
+  padding: 10px;
+}
+
+/* CSS Style for Shop Cart Page */
+.products-container {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Corrected duplicate property */
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.products-container i {
+  font-size: 25px;
+  color: red;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.product-header {
+  color: var(--black);
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 3px solid var(--black);
+  margin: 0 auto;
+  padding-bottom: 9px;
+}
+
+.product-title,
+.price,
+.quantity,
+.total {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px blue solid;
+}
+
+.product-title {
+  width: 45%;
+}
+
+.price,
+.quantity {
+  width: 40%;
+}
+
+.total {
+  width: 25%;
+}
+
+.products {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-bottom: 1px blue solid;
+}
+
+.products img {
+  width: 75px;
+}
+
+.basketTotalContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.basketTotalTitle {
+  width: 30%;
+}
+
+.basketTotal {
+  width: 10%;
+}
+
+/*=== Contacts Section ===*/
+#contacts {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red);
+}
+
+#contacts .contact-list {
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#contacts .contact-link {
+  color: black;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+#contacts .contact-link:hover {
+  color: var(--white);
+  cursor: pointer;
+}
+
+/*=== Footer Section ===*/
+footer {
+  background-color: var(--red);
+  height: var(--footer-height);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
